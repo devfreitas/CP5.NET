@@ -1,0 +1,23 @@
+@host = http://localhost:5000
+
+### Criar
+POST {{host}}/api/jogos
+Content-Type: application/json
+
+{
+  "titulo": "Need for Speed: Most Wanted",
+  "plataforma": "PlayStation 3",
+  "genero": "Corrida",
+  "preco": 79.90,
+  "anoLancamento": 2012,
+  "estoque": 5
+}
+
+### Listar
+GET {{host}}/api/jogos
+
+### Busca por plataforma e preço máximo
+GET {{host}}/api/jogos/busca?plataforma=PlayStation 3&precoMaximo=100
+
+### Relatório de estoque
+GET {{host}}/api/jogos/relatorio-estoque
